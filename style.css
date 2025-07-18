@@ -21,9 +21,6 @@ h1 {
 }
 
 /* Main Section */
-.main {
-  box-sizing: border-box;
-}
 
 .nav_section {
   background-image: url("media/the-town-bg-01.4fb1a448e9b51ceb326a.jpg");
@@ -107,7 +104,6 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 50px;
-  height: auto;
 }
 
 .intro_image {
