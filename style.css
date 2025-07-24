@@ -3,182 +3,371 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: cursive;
 }
-
 a {
   text-decoration: none;
-  color: blue;
-  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  transition: 0.5s;
+  user-select: none;
+}
+h1 {
+  color: white;
 }
 
 a:hover {
   color: blue;
 }
-
-h1 {
-  font-size: 2.5rem;
-}
-
-/* Nav Section */
-
-.nav_section {
-  background-image: url("media/the-town-bg-01.4fb1a448e9b51ceb326a.jpg");
-  background-size: cover;
-  background-position: 50%;
-  position: relative;
+.main {
+  width: 100%;
   height: 100vh;
-}
-/* Left Top Section */
-.left_top_section {
-  position: absolute;
-  left: 1%;
-  top: 1%;
-  width: 20%;
-  height: 10%;
+  background: url("media/bg.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
+  flex-direction: column;
+}
+
+.main .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.main .top .right {
+  display: flex;
+  justify-content: end;
+  gap: 2em;
+  flex-basis: 30%;
+}
+
+.main .top .right .b_link {
+  color: blue;
+}
+
+.main .bottom {
+  color: white;
+  text-align: center;
+  flex-basis: 85%;
+  display: flex;
+  justify-content: center;
+  gap: 0.6em;
+  flex-direction: column;
   align-items: center;
 }
 
-.left_top_section .BrandName {
-  position: absolute;
-  left: 1%;
-  top: 8%;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-}
-
-.BrandName:hover {
-  color: blue;
-}
-
-/* Right Top Section */
-.right_top_section {
-  position: absolute;
-  right: 1%;
-  top: 3%;
-}
-
-.right_top_section a {
-  text-decoration: none;
-  color: white;
-  margin-right: 10px;
-  font-size: 22px;
-}
-
-.right_top_section .activeColor {
-  color: blue;
-}
-
-/* Center Section */
-.center_section {
-  position: absolute;
-  display: inline-block;
-  top: 45%;
-  left: 44%;
-  color: white;
-  font-size: 20px;
-  margin: 0 10px !important;
-  text-decoration: none;
-}
-
-.center_section h1 {
+.main .bottom .content {
   text-align: center;
-  margin: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
 }
-
-.center_section p {
-  text-align: center;
-  margin: 0 0 1rem 0;
+.main .bottom .content p {
+  color: white;
 }
-
-.center_section .author {
+.main .bottom .content span {
   color: blue;
-  font-weight: bold;
 }
-
-/* Introduction Section */
-.intro_section {
+@media screen and (max-width: 640px) {
+  .main .top .right {
+    flex-direction: column;
+  }
+  .main .bottom {
+    flex-basis: 50%;
+  }
+}
+/* introduction */
+.introduction {
+  display: flex;
+  padding: 2.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.introduction .left {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-}
-
-.intro_image {
-  width: 40%;
-  margin-right: 5%;
-}
-
-.intro_image img {
   width: 100%;
-  height: auto;
-  display: block;
 }
 
-.intro_text h1 {
-  color: blue;
-  margin-bottom: 20px;
+.introduction .left img {
+  width: 80%;
 }
-
-.intro_text .intro_text_p1,
-.intro_text .intro_text_p2 {
-  color: #777;
-  font-size: large;
-  margin-bottom: 20px;
-}
-
-.intro_text_button {
-  border: 1px solid transparent;
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: white;
-  background-color: blue;
-}
-
-/* Work Section */
-.work_section {
-  padding: 50px 0;
-  text-align: center;
-  background: linear-gradient(180deg, #e3987f, #5c648c);
-  color: white;
-  position: relative;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.work_box {
+.introduction .right {
   flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.introduction .right > div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.introduction .right h2 {
+  color: blue;
+  font-size: 2.4em;
+  margin-bottom: 1.2em;
+}
+.introduction .right p {
+  color: grey;
+  margin-bottom: 1.2em;
 }
 
-.work_box h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.introduction .right .bold {
+  font-weight: bold;
 }
 
-.work_box a {
+.introduction .right .active {
+  color: blue;
+  font-weight: bold;
+}
+
+.introduction .right button {
+  width: fit-content;
+  border: none;
+  margin-top: 2em;
+  padding: 0.4em 0.8em;
+  color: white;
+  cursor: pointer;
+  background-color: blue;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+
+.introduction .right button:hover {
+  background-color: rgb(3, 3, 163);
+}
+
+@media screen and (min-width: 992px) {
+  .introduction .left {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .introduction {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .introduction .left {
+    width: 100%;
+    height: auto;
+  }
+
+  .introduction .left img {
+    width: 100%;
+  }
+  .introduction .right > div {
+    align-items: center;
+    text-align: center;
+  }
+  .introduction .right h2 {
+    margin-bottom: 1.5em;
+  }
+
+  .introduction .right p {
+    margin-bottom: 1em;
+  }
+}
+
+/* work 1 */
+.ourwork {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(180deg, #e3987f, #5c648c);
+  justify-content: space-around;
+  padding: 4em 4.5em;
+}
+
+.ourwork div {
+  text-align: center;
+  width: 30%;
+}
+
+.ourwork div h1 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+.ourwork div a {
+  color: blue;
   display: block;
-  margin-bottom: 10px;
-  color: #b2ccff;
+  margin: 0.1em 0em;
+  font-size: 1.2em;
   text-decoration: none;
 }
+@media screen and (max-width: 640px) {
+  .banner {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .banner div {
+    text-align: center;
+    width: 100%;
+  }
+}
+/* our work 2 */
 
-.work_box a:hover {
-  text-decoration: underline;
+.our-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+}
+.our-work .imgs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+}
+.our-work .imgs img {
+  width: 15%;
+  height: 250px;
+}
+.our-work h1 {
+  color: blue;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+.our-work p {
+  width: 99%;
+  margin-bottom: 1.8em;
 }
 
-.work_box p {
-  font-size: 0.9em;
-  line-height: 1.4;
+@media screen and (max-width: 640px) {
+  .our-work p {
+    width: 99%;
+  }
+  .our-work .imgs {
+    flex-direction: column;
+  }
+  .our-work .imgs img {
+    width: 50%;
+  }
+}
+/* contact */
+
+.contact {
+  background-image: url(media/fotter.jpg);
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2em 4em;
+}
+.contact .intro {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+}
+
+.contact .intro h1 {
+  font-size: 2.4em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.8em;
+  border-bottom: 2px solid white;
+  position: relative;
+}
+.contact .intro h1::after {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 30%;
+  background-color: white;
+  bottom: -8px;
+  left: 0;
+}
+
+.contact .intro p {
+  margin-bottom: 4em;
+  line-height: 2em;
+}
+
+.contact .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact .links div {
+  width: 40%;
+  padding-bottom: 4.2em;
+  margin-bottom: 2.4em;
+}
+
+.contact .links .subscribe input {
+  outline: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 0.3em;
+  padding: 0.1em 0.5em;
+  font-size: 1em;
+  color: white;
+  width: 50%;
+  margin-right: 0.5em;
+}
+.contact .links .subscribe button {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 0.1em;
+  padding: 0.1em 0.5em;
+  font-size: 1em;
+  color: blue;
+  font-weight: 700;
+}
+
+.contact .links .subscribe input::placeholder {
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+
+footer span {
+  color: blue;
+}
+
+@media screen and (min-width: 641px) and (max-width: 748px) {
+  .contact .intro {
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .intro .links {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contact {
+    padding: 1em;
+  }
+  .contact .intro {
+    text-align: center;
+    width: 100%;
+  }
+  .contact .intro h1::after {
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+  }
+  .contact .intro .links div {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .contact .intro .links .subscribe input {
+    width: 40%;
+  }
+  footer{
+    font-size: 0.8em;
+  }
 }
